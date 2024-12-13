@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#3 Experimental Clock</title>
+    <style>
+        @font-face {
+            font-family: 'Schnyder';
+            src: url('schnyder xl demi italic.otf') format('opentype');
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Schnyder', Arial, sans-serif;
+            overflow: hidden; /* 防止滚动条 */
+        }
+
+        /* 背景图片 */
+        body {
+            background-image: url('Gradient 17.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p {
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 20px;
+        }
+
+        a {
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        canvas {
+            position: absolute;
+            top: 65%; /* 再向下移动 */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* 确保在背景图片上方 */
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="experimental-clock.js"></script> <!-- 引入 p5.js 草图文件 -->
+</head>
+<body>
+    <h1>#3 Experimental Clock</h1>
+    <p>In my experimental clock design, there are three main components: a moving mini clock, a background circle that changes shape and color, representing a continuous 24-hour cycle, and a millisecond timer in the top left corner. Together, these elements create a unique way of tracking time.</p>
+
+    <!-- 返回主页的链接 -->
+    <a href="index.html">Back to Home</a>
+</body>
+</html>

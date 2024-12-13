@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joanna's Portfolio</title>
+    <style>
+        @font-face {
+            font-family: 'Schnyder';
+            src: url('schnyder xl demi italic.otf') format('opentype');
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Schnyder', Arial, sans-serif;
+            overflow: hidden; /* 防止滚动条 */
+        }
+
+        /* 视频背景 */
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 确保视频比例合适并充满屏幕 */
+            z-index: -1; /* 背景视频在内容下方 */
+        }
+
+        /* 顶部按钮布局 */
+        .button-container {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px; /* 调整间距，避免文字出界 */
+            z-index: 1;
+        }
+
+        .button-container a {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .button-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* 项目按钮布局 */
+        .project-buttons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            white-space: nowrap; /* 强制文字在一行内 */
+        }
+
+        .project-buttons a {
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 15px; /* 控制文字间距 */
+        }
+
+        .project-buttons a:hover {
+            text-decoration: underline;
+        }
+
+        /* Lower part: Zhiman Huang */
+        .lower-part {
+            position: absolute;
+            bottom: 2%;
+            width: 100%;
+            text-align: center;
+            font-size: 10vw; /* 稍微增大字体 */
+            color: white;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 视频背景 -->
+    <video id="video-background" autoplay loop muted>
+        <source src="2024.04.21.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- 顶部按钮 -->
+    <div class="button-container">
+        <a href="about-me.html">About Me</a>
+        <a href="about-fashion-design.html" style="margin-right: 40px;">About Fashion Design</a>
+    </div>
+
+    <!-- 项目按钮 -->
+    <div class="project-buttons">
+        <a href="lost-and-found.html">#1 Lost & Found</a>
+        <a href="face-generator.html">#2 Face Generator</a>
+        <a href="experimental-clock.html">#3 Experimental Clock</a>
+        <a href="exquisite-corpse.html">#4 Exquisite Corpse</a>
+        <a href="optical-illusion.html">#5 Optical Illusion</a>
+        <a href="data-portrait.html">#6 Data Portrait</a>
+        <a href="autobiographical-game.html">#7 Autobiographical Game</a>
+    </div>
+
+    <!-- Lower part: Zhiman Huang -->
+    <div class="lower-part">
+        Zhiman Huang
+    </div>
+</body>
+</html>

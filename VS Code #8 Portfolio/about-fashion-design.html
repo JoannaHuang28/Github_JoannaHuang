@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Fashion Design</title>
+    <style>
+        @font-face {
+            font-family: 'Schnyder';
+            src: url('schnyder xl demi italic.otf') format('opentype');
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Schnyder', Arial, sans-serif;
+            overflow-x: hidden; /* 防止横向滚动条 */
+        }
+
+        /* 返回主页按钮样式 */
+        .back-home {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            font-size: 1.2rem; /* 保持字体大小一致 */
+            color: black;
+            text-decoration: none;
+            z-index: 10;
+        }
+
+        .back-home:hover {
+            text-decoration: underline;
+        }
+
+        /* 标题样式 */
+        .title {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%); /* 居中对齐 */
+            font-size: 1.2rem; /* 与首页一致 */
+            color: black;
+            z-index: 10;
+        }
+
+        /* 图片容器样式 */
+        .image-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 每行两张图片 */
+            gap: 0;
+            width: 100%;
+        }
+
+        .image-container img {
+            width: 100%; /* 图片宽度充满列 */
+            height: 100vh; /* 图片高度充满视窗高度 */
+            object-fit: cover; /* 确保图片比例正确 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 返回主页的链接 -->
+    <a href="index.html" class="back-home">Back to home</a>
+
+    <!-- 页面标题 -->
+    <div class="title">FW2024</div>
+
+    <!-- 图片内容 -->
+    <div class="image-container">
+        <img src="20240421-Joannah April 217731-Edit.jpg" alt="Image 1">
+        <img src="20240421-Joannah April 217841-Edit-Edit-2.jpg" alt="Image 2">
+        <img src="20240421-Joannah April 217843-Edit-Edit.jpg" alt="Image 3">
+        <img src="20240421-Joannah April 217958-Edit.jpg" alt="Image 4">
+        <img src="20240421-Joannah April 217965-Edit-Edit.jpg" alt="Image 5">
+        <img src="20240421-Joannah April 217970-Edit.jpg" alt="Image 6">
+    </div>
+</body>
+</html>

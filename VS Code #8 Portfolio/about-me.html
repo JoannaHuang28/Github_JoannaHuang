@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        @font-face {
+            font-family: 'Schnyder';
+            src: url('schnyder xl demi italic.otf') format('opentype');
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Schnyder', Arial, sans-serif;
+            overflow-x: hidden; /* 防止横向滚动条 */
+        }
+
+        /* 返回主页按钮样式 */
+        .back-home {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            font-size: 1.2rem; /* 保持字体大小一致 */
+            color: black;
+            text-decoration: none;
+            z-index: 10;
+        }
+
+        .back-home:hover {
+            text-decoration: underline;
+        }
+
+        /* 页面右上角标题样式 */
+        .about-me-title {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 1.2rem;
+            color: black;
+            z-index: 10;
+        }
+
+        /* 页面顶部居中标题样式 */
+        .page-title {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            color: black;
+            z-index: 10;
+        }
+
+        /* 图片容器样式 */
+        .image-container {
+            display: grid;
+            grid-template-rows: 100vh 100vh; /* 两行，每行一个页面高度 */
+            width: 100%;
+        }
+
+        /* 第一排图片样式 */
+        .image-container .row-1 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 第一行高度为视窗高度 */
+            background: rgba(255, 255, 255, 0.7); /* 半透明白色覆盖层 */
+        }
+
+        .image-container .row-1 img {
+            width: 80%; /* 图片宽度为视窗的 80% */
+            height: auto; /* 保持宽高比例 */
+            object-fit: contain; /* 确保图片完整显示 */
+            position: absolute;
+            z-index: -1; /* 将图片放在文字后面 */
+        }
+
+        .image-container .row-1 .overlay-text-left {
+            position: absolute;
+            left: 5%; /* 左侧文字位置 */
+            top: 50%; /* 垂直方向居中 */
+            transform: translateY(-50%); /* 调整垂直居中 */
+            text-align: left; /* 左对齐文字 */
+            font-size: 1.2rem; /* 字体大小与其他保持一致 */
+            color: black;
+            line-height: 2rem;
+        }
+
+        .image-container .row-1 .overlay-text-right {
+            position: absolute;
+            right: 5%; /* 右侧文字位置 */
+            top: 50%; /* 垂直方向居中 */
+            transform: translateY(-50%); /* 调整垂直居中 */
+            text-align: right; /* 右对齐文字 */
+            font-size: 1.2rem; /* 字体大小与其他保持一致 */
+            color: black;
+            line-height: 2rem;
+        }
+
+        /* 第二排图片样式 */
+        .image-container .row-2 {
+            display: flex; /* 横向排列图片 */
+        }
+
+        .image-container .row-2 img {
+            width: 50%; /* 每张图片占一半宽度 */
+            height: 100%; /* 图片高度占满整个页面 */
+            object-fit: cover; /* 确保图片充满区域 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 返回主页的链接 -->
+    <a href="index.html" class="back-home">Back to home</a>
+
+    <!-- 页面右上角标题 -->
+    <div class="about-me-title">About Me</div>
+
+    <!-- 页面顶部居中标题 -->
+    <div class="page-title">Zhiman Huang</div>
+
+    <!-- 图片内容 -->
+    <div class="image-container">
+        <!-- 第一排图片 -->
+        <div class="row-1">
+            <img src="876.PNG" alt="Image 1">
+            <div class="overlay-text-left">
+                Bachelor Of Fine Art<br>
+                Fashion Institute of Technology<br>
+                Fashion Design
+            </div>
+            <div class="overlay-text-right">
+                Master Of Fine Art<br>
+                PARSONS<br>
+                Fashion and Technology
+            </div>
+        </div>
+        <!-- 第二排图片 -->
+        <div class="row-2">
+            <img src="987.png" alt="Image 2">
+            <img src="JH.JPG" alt="Image 3">
+        </div>
+    </div>
+</body>
+</html>
